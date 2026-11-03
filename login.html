@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log in | Wayamba Exchange</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:wght@600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="auth">
+  <aside class="auth-aside">
+    <a class="brand" href="index.html">
+      <span class="brand-mark gold">WX</span>
+      <span class="brand-text"><strong>Wayamba Exchange</strong><span>Wayamba University of Sri Lanka</span></span>
+    </a>
+    <div>
+      <h1>Welcome back.</h1>
+      <p>Log in to manage your posts, confirm handovers and find what you need on campus.</p>
+    </div>
+    <small>Administrators use the same login and are taken to the admin dashboard.</small>
+  </aside>
+
+  <main class="auth-main">
+    <form class="form-card" id="login-form" novalidate>
+      <div>
+        <h2>Log in</h2>
+        <p class="sub">New here? <a href="signup.html"><strong>Create an account</strong></a></p>
+      </div>
+
+      <div id="form-alert" hidden></div>
+
+      <div class="field">
+        <label for="student_id">Student ID</label>
+        <input id="student_id" type="text" autocomplete="username" placeholder="Your Student ID" required>
+      </div>
+
+      <div class="field">
+        <div class="label-row"><label for="password">Password</label><a href="index.html#contact">Forgot password?</a></div>
+        <div class="pw-wrap">
+          <input id="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+          <button type="button" class="pw-toggle" data-target="password">Show</button>
+        </div>
+      </div>
+
+      <div class="check" style="align-items:center">
+        <input id="remember" type="checkbox" style="margin:0">
+        <label for="remember">Keep me logged in on this device</label>
+      </div>
+
+      <button class="btn btn-primary btn-block" type="submit" id="submit-btn">Log in</button>
+    </form>
+  </main>
+</div>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/login.js"></script>
+</body>
+</html>

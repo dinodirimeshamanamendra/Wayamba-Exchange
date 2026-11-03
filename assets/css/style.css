@@ -1,0 +1,128 @@
+/* Wayamba Exchange - shared styles */
+:root{
+  --green-900:#0B3D2E; --green-700:#14573F; --green-100:#EEF5F1; --green-200:#CFE3D8;
+  --gold:#E8C46A; --ink:#1B2A24; --muted:#56655E; --line:#DDE3DE; --line-strong:#BFCBC4;
+  --bg:#F6F7F4; --white:#fff; --danger:#9B2C2C; --danger-bg:#FBEAEA; --ok-bg:#D5EDDF;
+  --sans:'Public Sans',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --serif:'Source Serif 4',Georgia,'Times New Roman',serif;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.5}
+a{color:var(--green-700)} a:hover{color:var(--green-900)}
+h1,h2,h3{font-family:var(--serif);color:var(--green-900);margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+/* Buttons */
+.btn{display:inline-block;padding:13px 22px;border-radius:8px;font-weight:700;font-size:15px;text-decoration:none;border:1.5px solid var(--green-900);cursor:pointer;font-family:inherit;text-align:center}
+.btn-primary{background:var(--green-900);color:#fff}
+.btn-primary:hover{background:var(--green-700);color:#fff}
+.btn-outline{background:transparent;color:var(--green-900)}
+.btn-outline:hover{background:var(--green-100)}
+.btn-gold{background:var(--gold);border-color:var(--gold);color:var(--green-900)}
+.btn-ghost-light{border-color:#9CC3AF;color:#fff}
+.btn-block{display:block;width:100%;font-size:16px;padding:14px}
+
+/* Header */
+.site-header{background:#fff;border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:12px 32px;padding-top:14px;padding-bottom:14px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--green-900)}
+.brand-mark{width:44px;height:44px;border-radius:10px;background:var(--green-900);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:700;font-size:19px}
+.brand-mark.gold{background:var(--gold);color:var(--green-900)}
+.brand-text{display:flex;flex-direction:column;line-height:1.25}
+.brand-text strong{font-family:var(--serif);font-size:20px}
+.brand-text span{font-size:12px;color:var(--muted)}
+.nav{display:flex;flex-wrap:wrap;gap:4px;margin-left:auto;align-items:center}
+.nav a{padding:12px 14px;font-weight:500;font-size:15px;color:#3C4B44;text-decoration:none}
+.nav a.active{font-weight:700;color:var(--green-900)}
+.nav .btn{padding:11px 18px;margin-left:6px}
+.nav form{margin:0}
+
+/* Welcome page */
+.hero{background:var(--green-900);color:#fff}
+.hero .wrap{display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding-top:72px;padding-bottom:72px}
+.hero-text{flex:1 1 480px;min-width:0}
+.eyebrow{display:inline-block;padding:6px 12px;border:1px solid #6E9C87;border-radius:999px;font-size:13px;font-weight:600;color:var(--green-200);letter-spacing:.04em}
+.hero h1{color:#fff;font-size:50px;line-height:1.12;margin:20px 0 16px}
+.hero p{font-size:18px;line-height:1.6;color:#D6E6DD;margin:0 0 28px;max-width:540px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.steps-card{flex:1 1 380px;min-width:0;background:var(--green-700);border-radius:18px;padding:28px}
+.steps-card h2{font-family:var(--sans);font-size:13px;letter-spacing:.06em;color:var(--green-200);margin-bottom:12px;text-transform:uppercase}
+.step{display:flex;gap:16px;padding:14px 0;border-top:1px solid #3F7B63}
+.step-n{flex:0 0 36px;height:36px;border-radius:50%;background:var(--gold);color:var(--green-900);font-weight:700;display:flex;align-items:center;justify-content:center}
+.step strong{display:block;font-size:16px}
+.step span{font-size:14px;line-height:1.5;color:var(--green-200)}
+.section{padding:64px 0 16px}
+.section h2{font-size:32px;margin-bottom:8px}
+.section .lead{margin:0 0 28px;color:var(--muted);font-size:16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.card h3{font-family:var(--sans);font-size:18px;color:var(--ink)}
+.card p{margin:0;font-size:15px;line-height:1.6;color:var(--muted)}
+.chip{align-self:flex-start;padding:5px 12px;border-radius:999px;font-weight:700;font-size:13px}
+.chip-exchange{background:#E1ECF8;color:#17497F}
+.chip-sale{background:#FBEBC4;color:#6B4700}
+.chip-free{background:var(--ok-bg);color:var(--green-900)}
+.about{display:flex;flex-wrap:wrap;gap:32px;padding-bottom:72px}
+.about>div{flex:1 1 360px;min-width:0}
+.about p{font-size:16px;line-height:1.7;color:#3C4B44;margin:0 0 12px}
+.contact-box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}
+.contact-box h3{font-family:var(--sans);font-size:17px;margin-bottom:10px}
+.contact-box p{margin:4px 0}
+.site-footer{background:var(--green-900);color:var(--green-200);font-size:14px}
+.site-footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;padding-top:28px;padding-bottom:28px}
+.site-footer a{color:var(--gold)}
+
+/* Sign up / Log in pages */
+.auth{min-height:100vh;display:flex;flex-wrap:wrap}
+.auth-aside{flex:1 1 420px;min-width:0;background:var(--green-900);color:#fff;padding:48px;display:flex;flex-direction:column;justify-content:space-between;gap:40px}
+.auth-aside .brand{color:#fff}
+.auth-aside .brand-text span{color:var(--green-200)}
+.auth-aside h1{color:#fff;font-size:38px;line-height:1.18;margin:0 0 16px}
+.auth-aside p{font-size:17px;line-height:1.6;color:#D6E6DD;margin:0 0 24px;max-width:440px}
+.auth-aside ul{list-style:none;margin:0;padding:0}
+.auth-aside li{display:flex;gap:12px;margin-bottom:12px;font-size:15px;color:#E6F0EA}
+.auth-aside li:before{content:"\2713";color:var(--gold);font-weight:700}
+.auth-aside small{font-size:13px;color:#9CC3AF}
+.auth-main{flex:1 1 540px;min-width:0;display:flex;align-items:center;justify-content:center;padding:40px 24px}
+.form-card{width:100%;max-width:520px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:36px;display:flex;flex-direction:column;gap:18px}
+.form-card h2{font-size:30px;margin-bottom:4px}
+.form-card .sub{margin:0;color:var(--muted);font-size:15px}
+.row{display:flex;flex-wrap:wrap;gap:18px}
+.form-card>.field{flex:0 0 auto}
+.field{flex:1 1 200px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.field label{font-weight:600;font-size:14px}
+.field input,.field select{height:48px;padding:0 14px;border:1.5px solid var(--line-strong);border-radius:8px;font-size:16px;font-family:inherit;background:#fff;color:var(--ink);width:100%}
+.field input:focus,.field select:focus{outline:3px solid var(--gold);outline-offset:1px;border-color:var(--green-900)}
+.field .hint{font-size:13px;color:var(--muted)}
+.field .error-text{font-size:13px;color:var(--danger);font-weight:600}
+.field.invalid input,.field.invalid select{border-color:var(--danger)}
+.pw-wrap{position:relative}
+.pw-wrap input{padding-right:70px}
+.pw-toggle{position:absolute;right:6px;top:6px;height:36px;padding:0 10px;border:0;background:transparent;color:var(--green-700);font-weight:600;font-size:13px;cursor:pointer;font-family:inherit}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.5;color:#3C4B44}
+.check input{width:20px;height:20px;margin:2px 0 0;accent-color:var(--green-900)}
+.alert{padding:12px 14px;border-radius:8px;font-size:14px;line-height:1.5}
+.alert-error{background:var(--danger-bg);color:var(--danger);border:1px solid #E7BDBD}
+.alert-ok{background:var(--ok-bg);color:var(--green-900);border:1px solid #A9D6BC}
+.alert ul{margin:6px 0 0;padding-left:18px}
+.label-row{display:flex;justify-content:space-between;align-items:baseline}
+.label-row a{font-size:13px;font-weight:600}
+
+/* Simple placeholder pages */
+.panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px;margin:40px 0}
+.panel h1{font-size:30px;margin-bottom:8px}
+.panel dl{display:grid;grid-template-columns:160px 1fr;gap:10px 16px;margin:20px 0}
+.panel dt{color:var(--muted)} .panel dd{margin:0;font-weight:600}
+.notice{background:var(--green-100);border:1px solid var(--green-200);border-radius:10px;padding:14px 16px;color:#2E4A3E;font-size:15px}
+
+@media (max-width:640px){
+  .wrap{padding:0 20px}
+  .hero h1{font-size:36px}
+  .auth-aside{padding:32px 24px}
+  .form-card{padding:24px}
+}
+
+/* Hidden elements stay hidden, empty field holders take no space */
+[hidden]{display:none !important}
+.field:empty{display:none}

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign up | Wayamba Exchange</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:wght@600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="auth">
+  <aside class="auth-aside">
+    <a class="brand" href="index.html">
+      <span class="brand-mark gold">WX</span>
+      <span class="brand-text"><strong>Wayamba Exchange</strong><span>Wayamba University of Sri Lanka</span></span>
+    </a>
+    <div>
+      <h1>Join your campus exchange community.</h1>
+      <p>Create an account with your Student ID to post items you are giving, or request items you need.</p>
+      <ul>
+        <li>Post items you are giving or requesting</li>
+        <li>Exchange, sell or give away to fellow students</li>
+        <li>Track your posts and handovers from your profile</li>
+      </ul>
+    </div>
+    <small>Only students of Wayamba University of Sri Lanka can register.</small>
+  </aside>
+
+  <main class="auth-main">
+    <form class="form-card" id="signup-form" novalidate>
+      <div>
+        <h2>Create your account</h2>
+        <p class="sub">Already registered? <a href="login.html"><strong>Log in</strong></a></p>
+      </div>
+
+      <div id="form-alert" hidden></div>
+
+      <div class="field">
+        <label for="full_name">Full name</label>
+        <input id="full_name" type="text" autocomplete="name" placeholder="Name as on your student record" required>
+      </div>
+
+      <div class="field">
+        <label for="student_id">Student ID</label>
+        <input id="student_id" type="text" autocomplete="username" placeholder="Your Student ID" required>
+        <span class="hint">This is your login ID. It cannot be changed later.</span>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="faculty">Faculty</label>
+          <select id="faculty" required>
+            <option value="">Select your faculty</option>
+            <option value="Faculty of Applied Sciences">Faculty of Applied Sciences</option>
+            <option value="Faculty of Business Studies and Finance">Faculty of Business Studies and Finance</option>
+            <option value="Faculty of Technology">Faculty of Technology</option>
+            <option value="Faculty of Medicine">Faculty of Medicine</option>
+            <option value="Faculty of Agriculture and Plantation Management">Faculty of Agriculture and Plantation Management</option>
+            <option value="Faculty of Livestock, Fisheries, and Nutrition">Faculty of Livestock, Fisheries, and Nutrition</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="contact">Contact number</label>
+          <input id="contact" type="tel" autocomplete="tel" placeholder="07X XXX XXXX" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="pw-wrap">
+            <input id="password" type="password" autocomplete="new-password" placeholder="8+ characters" required>
+            <button type="button" class="pw-toggle" data-target="password">Show</button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="password_confirm">Confirm password</label>
+          <div class="pw-wrap">
+            <input id="password_confirm" type="password" autocomplete="new-password" placeholder="Repeat it" required>
+            <button type="button" class="pw-toggle" data-target="password_confirm">Show</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="check">
+        <input id="agree" type="checkbox">
+        <label for="agree">I will only post items I own and will confirm each handover honestly in the system.</label>
+      </div>
+      <div class="field" id="agree-field" style="flex:0 0 auto"></div>
+
+      <button class="btn btn-primary btn-block" type="submit" id="submit-btn">Create account</button>
+    </form>
+  </main>
+</div>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/signup.js"></script>
+</body>
+</html>

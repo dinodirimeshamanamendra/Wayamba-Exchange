@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My profile | Wayamba Exchange</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:wght@600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header id="site-header"></header>
+
+<!-- Placeholder: the full student profile is built in a later phase. -->
+<main class="wrap">
+  <div class="panel">
+    <h1 id="welcome">Loading...</h1>
+    <p style="color:var(--muted);margin:0" id="role-line"></p>
+    <dl>
+      <dt>Student ID</dt><dd id="p-id"></dd>
+      <dt>Faculty</dt><dd id="p-faculty"></dd>
+      <dt>Contact number</dt><dd id="p-contact"></dd>
+      <dt>Member since</dt><dd id="p-since"></dd>
+    </dl>
+    <div class="notice">Item posting, browsing and handover confirmation will be added in the next phases.</div>
+  </div>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="assets/js/app.js"></script>
+<script>
+  WX.renderFooter();
+  WX.me().then(function (me) {
+    if (!me.logged_in) { location.replace('login.html'); return; }
+    WX.renderHeader(me, 'account');
+    var u = me.user;
+    document.getElementById('welcome').textContent = 'Welcome, ' + u.full_name;
+    document.getElementById('role-line').textContent = 'You are logged in as a ' + u.role + '.';
+    document.getElementById('p-id').textContent = u.student_id;
+    document.getElementById('p-faculty').textContent = u.faculty;
+    document.getElementById('p-contact').textContent = u.contact;
+    document.getElementById('p-since').textContent = String(u.created_at).slice(0, 10);
+  }).catch(function () { location.replace('login.html'); });
+</script>
+</body>
+</html>
